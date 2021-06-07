@@ -18,7 +18,7 @@ def mainpage():
     name_hash = hashlib.sha256(salted_name.encode()).hexdigest()
 
     header = '<html><head><title>Identidock</title></head><body>'
-    body =  '''Welcom to the IDENTICON!!
+    body =  '''Welcome to the IDENTICON!!
             Who are you?
             <form method="POST">
             Your name is... <input type="text" name="name" value="{0}">

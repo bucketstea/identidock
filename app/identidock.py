@@ -36,7 +36,7 @@ def mainpage():
 @app.route('/monster/<name>')
 def get_identicon(name):
 
-    name = html.escape(name, quote=True)  ##何故かこれがあると画像が壊れる.commentOutしてもテストは通るのでひとまずcommentOut
+    name = html.escape(name, quote=True)
     image = cache.get(name)
     if image is None:
         print ("Cache miss", flush=True)

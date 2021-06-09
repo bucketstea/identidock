@@ -1,6 +1,5 @@
 FROM python:3.9
 
-
 RUN pip install --upgrade pip \
     && pip install Flask uWSGI requests redis \
     && groupadd -r uwsgi && useradd -r -g uwsgi uwsgi

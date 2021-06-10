@@ -1,4 +1,4 @@
-FROM jenkins:2.60.3
+FROM jenkins/jenkins:lts-jdk11
 USER root
 
 RUN echo "deb http://apt.dockerproject.org/repo debian-jessie main" \
@@ -24,5 +24,5 @@ docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose; \
 
 USER jenkins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
+RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
 

@@ -5,7 +5,7 @@ RUN pip install --upgrade pip \
     && groupadd -r uwsgi && useradd -r -g uwsgi uwsgi
 
 WORKDIR /app
-COPY app /app
+COPY identidock/app /app
 COPY cmd.sh /
 
 EXPOSE 9090 9191

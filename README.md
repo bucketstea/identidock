@@ -1,7 +1,5 @@
 identidock
 
-====================
+============================
 
-kevin Gaudinのmonsteridを元にしたシンプルなidenticonサーバー。
-
-Adrian Mouat著、オライリージャパンの「Using Docker」による。
+入力された文字列に応じてドット絵アイコンを出力するWebサーバコンテナ
